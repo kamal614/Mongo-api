@@ -7,7 +7,6 @@ import 'package:mongodb_api/models/data_model.dart';
 Future<ApiResponse> fetchPaginatedData(
     {required int limit, required int page}) async {
   const String baseUrl = 'https://rainy-thundering-catcher.glitch.me/data';
-
   final Uri url = Uri.parse('$baseUrl?limit=$limit&page=$page');
 
   final http.Response response = await http.get(url);
